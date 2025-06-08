@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --card-background: #ffffff;
+  --border-color: #e2e8f0;
+  --muted-text: #64748b;
+  --accent-color: #3b82f6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --card-background: #1e293b;
+    --border-color: #334155;
+    --muted-text: #94a3b8;
+    --accent-color: #60a5fa;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mejorar el contraste y legibilidad del texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--foreground);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Mejor contraste para texto muted */
+.text-muted {
+  color: var(--muted-text);
+}
+
+/* Mejor contraste para botones */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+/* Mejor contraste para borders */
+.border-custom {
+  border-color: var(--border-color);
+}
+
+/* Mejor contraste para cards */
+.card-custom {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+}
